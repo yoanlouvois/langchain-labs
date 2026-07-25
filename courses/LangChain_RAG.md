@@ -24,7 +24,7 @@ Le pipeline RAG classique se décompose en 4 grandes étapes :
 Il y a deux grandes façons d'implémenter ça :
 
 - **RAG naïf (classique)** : on récupère systématiquement des documents à chaque question, sans réflexion — même si la question ne nécessite pas de recherche (ex: "Bonjour, comment tu vas ?").
-- **RAG agentique (agentic RAG)** — celui qu'on va construire dans ce cours : on donne au LLM un **outil de recherche** (retriever tool), et c'est **l'agent lui-même qui décide** :
+- **RAG agentique (agentic RAG)** — on donne au LLM un **outil de recherche** (retriever tool), et c'est **l'agent lui-même qui décide** :
   - s'il a besoin de chercher dans les documents ou s'il peut répondre directement,
   - si les documents récupérés sont pertinents (sinon, il reformule sa recherche),
   - quand il a assez d'information pour répondre.
